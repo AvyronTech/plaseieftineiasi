@@ -558,8 +558,20 @@ function Gallery() {
     { src: cat2, caption: "Plasă pe ușă balcon — siguranță pentru pisici" },
   ];
   const loop = [...items, ...items];
+  const [lightbox, setLightbox] = useState<GalleryItem | null>(null);
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightbox(null); };
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [lightbox]);
   return (
-    <section id="exemple" className="overflow-hidden bg-secondary/40 py-20">
+    <section id="exemple" className="overflow-hidden bg-secondary/40 py-12 md:py-14">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow="Vezi exemple"
@@ -567,12 +579,13 @@ function Gallery() {
           subtitle="Poze din apartamente și case unde am montat plase. Inclusiv plasele speciale, rezistente la pisici, și sistemele cu închidere magnetică."
         />
       </div>
-      <div className="marquee-pause mt-12">
+      <div className="marquee-pause mt-8">
         <div className="flex w-max animate-marquee gap-5 px-4">
           {loop.map((it, i) => (
             <figure
               key={i}
-              className="w-[280px] shrink-0 overflow-hidden rounded-2xl bg-card shadow-[var(--shadow-card)] sm:w-[340px]"
+              className="w-[280px] shrink-0 cursor-zoom-in overflow-hidden rounded-2xl bg-card shadow-[var(--shadow-card)] sm:w-[340px]"
+              onClick={() => setLightbox(it)}
             >
               <img
                 src={it.src}
@@ -587,6 +600,32 @@ function Gallery() {
           ))}
         </div>
       </div>
+      {lightbox && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setLightbox(null)}
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4 backdrop-blur"
+        >
+          <button
+            aria-label="Închide"
+            onClick={() => setLightbox(null)}
+            className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/10 text-xl font-bold text-white hover:bg-white/20"
+          >
+            ×
+          </button>
+          <figure className="max-h-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={lightbox.src}
+              alt={lightbox.caption}
+              className="max-h-[88vh] w-auto max-w-full rounded-xl object-contain"
+            />
+            <figcaption className="mt-3 text-center text-sm text-white/85">
+              {lightbox.caption}
+            </figcaption>
+          </figure>
+        </div>
+      )}
     </section>
   );
 }
