@@ -293,6 +293,7 @@ type Price = {
   badge?: string;
   dark?: boolean;
   icon?: React.ReactNode;
+  hideCta?: boolean;
 };
 
 function PriceCard({ p }: { p: Price }) {
@@ -329,14 +330,16 @@ function PriceCard({ p }: { p: Price }) {
           </li>
         ))}
       </ul>
-      <a
-        href={WA_LINK}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
-      >
-        Cere ofertă <ArrowRight className="h-4 w-4" />
-      </a>
+      {!p.hideCta && (
+        <a
+          href={WA_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+        >
+          Cere ofertă <ArrowRight className="h-4 w-4" />
+        </a>
+      )}
     </div>
   );
 }
