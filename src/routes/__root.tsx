@@ -72,14 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Plase anti-insecte Iași. Montare Rapida." },
+      { name: "description", content: "Confectionam si montam plase anti-insecte in Iasi si zonele adiacente cu rapiditate și profesionalism folosind produse de calitate și durabile." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Plase anti-insecte Iași. Montare Rapida." },
+      { property: "og:description", content: "Confectionam si montam plase anti-insecte in Iasi si zonele adiacente cu rapiditate și profesionalism folosind produse de calitate și durabile." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Plase anti-insecte Iași. Montare Rapida." },
+      { name: "twitter:description", content: "Confectionam si montam plase anti-insecte in Iasi si zonele adiacente cu rapiditate și profesionalism folosind produse de calitate și durabile." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/a24114b0-c9ab-4dc2-aa8f-dad4a7d5f635" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/a24114b0-c9ab-4dc2-aa8f-dad4a7d5f635" },
     ],
     links: [
       {
