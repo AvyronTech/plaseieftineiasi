@@ -151,16 +151,18 @@ function Hero() {
             Confecționăm și montăm{" "}
             <span className="text-primary">plase anti-insecte</span> în Iași
           </h1>
-          <p className="mt-5 max-w-xl text-lg text-white/85">
-            Calitate garantată. Montaj rapid. Prețuri corecte. Răspundem pe WhatsApp în
-            maxim 10 minute.
-          </p>
+          <ul className="mt-5 grid max-w-xl gap-2 text-base text-white/90 sm:text-lg">
+            <li className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-primary" /> Calitate garantată</li>
+            <li className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-primary" /> Montaj rapid</li>
+            <li className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-primary" /> Prețuri corecte</li>
+            <li className="flex items-center gap-2"><CheckCircle2 className="h-5 w-5 text-primary" /> Răspundem pe WhatsApp în maxim 10 minute</li>
+          </ul>
 
           <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:max-w-2xl">
             <Feature icon={<Ruler className="h-4 w-4" />} text="Măsurători gratuite" />
             <Feature icon={<Wrench className="h-4 w-4" />} text="Montaj inclus" />
             <Feature icon={<ShieldCheck className="h-4 w-4" />} text="Materiale de calitate" />
-            <Feature icon={<Clock className="h-4 w-4" />} text="1–3 zile lucrătoare" />
+            <Feature icon={<Clock className="h-4 w-4" />} text="Soluții personalizate" />
           </div>
 
           <div className="mt-7 flex flex-wrap gap-3">
@@ -239,7 +241,7 @@ function TrustBar() {
     { icon: <Wrench className="h-5 w-5" />, title: "MONTAJ RAPID", text: "Profesioniști cu experiență" },
     { icon: <BadgeCheck className="h-5 w-5" />, title: "PREȚURI CORECTE", text: "Raport calitate-preț excelent" },
     { icon: <MapPin className="h-5 w-5" />, title: "DEPLASARE INCLUSĂ", text: "Iași și comunele din județ" },
-    { icon: <Sparkles className="h-5 w-5" />, title: "EXPERIENȚĂ", text: "Mii de plase montate cu succes" },
+    { icon: <Sparkles className="h-5 w-5" />, title: "EXPERIENȚĂ", text: "Sute de plase montate cu succes" },
     { icon: <ShieldCheck className="h-5 w-5" />, title: "SERIOZITATE", text: "Siguranță 100% și seriozitate" },
   ];
   return (
@@ -291,6 +293,7 @@ type Price = {
   badge?: string;
   dark?: boolean;
   icon?: React.ReactNode;
+  hideCta?: boolean;
 };
 
 function PriceCard({ p }: { p: Price }) {
@@ -327,14 +330,16 @@ function PriceCard({ p }: { p: Price }) {
           </li>
         ))}
       </ul>
-      <a
-        href={WA_LINK}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
-      >
-        Cere ofertă <ArrowRight className="h-4 w-4" />
-      </a>
+      {!p.hideCta && (
+        <a
+          href={WA_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+        >
+          Cere ofertă <ArrowRight className="h-4 w-4" />
+        </a>
+      )}
     </div>
   );
 }
@@ -342,12 +347,12 @@ function PriceCard({ p }: { p: Price }) {
 function Pricing() {
   const standard: Price[] = [
     {
-      title: "Plase pentru geam",
+      title: "Plasă pentru geam",
       price: "130",
       features: ["Material anti-insecte", "Cadru aluminiu", "Montaj inclus"],
     },
     {
-      title: "Plase pentru ușă",
+      title: "Plasă pentru ușă",
       price: "220",
       features: ["Cadru robust", "Balamale rezistente", "Montaj inclus"],
     },
@@ -357,6 +362,7 @@ function Pricing() {
       unit: "/ plasă",
       features: ["Include 2 magneți / plasă", "Sistem eficient de închidere", "Vezi video în secțiunea Exemple"],
       badge: "OPȚIONAL",
+      hideCta: true,
     },
   ];
   const cat: Price[] = [
@@ -395,43 +401,43 @@ function Pricing() {
   ];
 
   return (
-    <section id="preturi" className="bg-secondary/40 py-20">
+    <section id="preturi" className="bg-secondary/40 py-12 md:py-14">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
-          eyebrow="Prețuri 2026"
+          eyebrow="Prețuri"
           title="Prețuri corecte, fără costuri ascunse"
-          subtitle="Măsurători, montaj, materiale și deplasare incluse în preț. Comune din județul Iași — fără taxe suplimentare."
+          subtitle="Măsurători, montaj, materiale și deplasare incluse în preț."
         />
 
-        <h3 className="mt-12 mb-4 font-display text-lg font-bold uppercase tracking-wider text-muted-foreground">
-          Plase anti-insecte
+        <h3 className="mt-8 mb-3 font-display text-base font-bold uppercase tracking-wider text-muted-foreground">
+          Plase anti-țânțari
         </h3>
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-3">
           {standard.map((p) => (
             <PriceCard key={p.title} p={p} />
           ))}
         </div>
 
-        <h3 className="mt-14 mb-4 flex items-center gap-2 font-display text-lg font-bold uppercase tracking-wider text-muted-foreground">
+        <h3 className="mt-8 mb-3 flex items-center gap-2 font-display text-base font-bold uppercase tracking-wider text-muted-foreground">
           <Cat className="h-5 w-5 text-primary" /> Plase rezistente la pisici
         </h3>
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           {cat.map((p) => (
             <PriceCard key={p.title} p={p} />
           ))}
         </div>
 
-        <h3 className="mt-14 mb-4 font-display text-lg font-bold uppercase tracking-wider text-muted-foreground">
+        <h3 className="mt-8 mb-3 font-display text-base font-bold uppercase tracking-wider text-muted-foreground">
           Rulouri cu plasă anti-insecte
         </h3>
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           {rolls.map((p) => (
             <PriceCard key={p.title} p={p} />
           ))}
         </div>
 
         {/* Accessories + included */}
-        <div className="mt-14 grid gap-5 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
           <div className="rounded-2xl bg-card p-6 shadow-[var(--shadow-card)]">
             <h4 className="font-display text-lg font-bold">Accesorii</h4>
             <ul className="mt-4 space-y-3 text-sm">
@@ -452,7 +458,7 @@ function Pricing() {
           <div className="rounded-2xl bg-card p-6 shadow-[var(--shadow-card)]">
             <h4 className="font-display text-lg font-bold">Ce oferim în preț</h4>
             <ul className="mt-4 space-y-2 text-sm">
-              {["Măsurători", "Montaj", "Materiale de calitate", "Timp de execuție: 1–3 zile lucrătoare"].map((t) => (
+              {["Măsurători", "Montaj", "Materiale de calitate", "Timp de execuție: imediat / programat"].map((t) => (
                 <li key={t} className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-primary" /> {t}
                 </li>
@@ -494,7 +500,7 @@ function Services() {
     {
       icon: <ShieldCheck className="h-6 w-6" />,
       title: "Montaj profesional",
-      text: "Montaj rapid, curat, fără să afecteze tâmplăria. Termen de execuție 1–3 zile lucrătoare.",
+      text: "Montaj rapid, curat, fără să afecteze tâmplăria. Programăm execuția când îți este convenabil.",
     },
     {
       icon: <Cat className="h-6 w-6" />,
@@ -513,24 +519,24 @@ function Services() {
     },
   ];
   return (
-    <section id="servicii" className="bg-background py-20">
+    <section id="servicii" className="bg-background py-12 md:py-14">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow="Servicii"
           title="De la măsurători la montaj — totul inclus"
-          subtitle="Lucrăm pentru apartamente și case, indiferent de numărul de plase necesare. Deplasare gratuită în Iași și comunele din județ."
+          subtitle="Lucrăm pentru apartamente și case, indiferent de numărul de plase necesare. Deplasare gratuită în Iași și împrejurimi."
         />
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {items.map((s) => (
             <div
               key={s.title}
-              className="group rounded-2xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:border-primary/30"
+              className="group rounded-2xl border border-border bg-card p-5 shadow-[var(--shadow-card)] transition hover:-translate-y-0.5 hover:border-primary/30"
             >
-              <div className="grid h-12 w-12 place-items-center rounded-xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
+              <div className="grid h-10 w-10 place-items-center rounded-xl bg-primary/10 text-primary transition group-hover:bg-primary group-hover:text-primary-foreground">
                 {s.icon}
               </div>
-              <h3 className="mt-4 font-display text-lg font-bold">{s.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{s.text}</p>
+              <h3 className="mt-3 font-display text-base font-bold">{s.title}</h3>
+              <p className="mt-1.5 text-sm text-muted-foreground">{s.text}</p>
             </div>
           ))}
         </div>
@@ -552,8 +558,20 @@ function Gallery() {
     { src: cat2, caption: "Plasă pe ușă balcon — siguranță pentru pisici" },
   ];
   const loop = [...items, ...items];
+  const [lightbox, setLightbox] = useState<GalleryItem | null>(null);
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") setLightbox(null); };
+    window.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [lightbox]);
   return (
-    <section id="exemple" className="overflow-hidden bg-secondary/40 py-20">
+    <section id="exemple" className="overflow-hidden bg-secondary/40 py-12 md:py-14">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow="Vezi exemple"
@@ -561,12 +579,13 @@ function Gallery() {
           subtitle="Poze din apartamente și case unde am montat plase. Inclusiv plasele speciale, rezistente la pisici, și sistemele cu închidere magnetică."
         />
       </div>
-      <div className="marquee-pause mt-12">
+      <div className="marquee-pause mt-8">
         <div className="flex w-max animate-marquee gap-5 px-4">
           {loop.map((it, i) => (
             <figure
               key={i}
-              className="w-[280px] shrink-0 overflow-hidden rounded-2xl bg-card shadow-[var(--shadow-card)] sm:w-[340px]"
+              className="w-[280px] shrink-0 cursor-zoom-in overflow-hidden rounded-2xl bg-card shadow-[var(--shadow-card)] sm:w-[340px]"
+              onClick={() => setLightbox(it)}
             >
               <img
                 src={it.src}
@@ -581,6 +600,32 @@ function Gallery() {
           ))}
         </div>
       </div>
+      {lightbox && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setLightbox(null)}
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-black/90 p-4 backdrop-blur"
+        >
+          <button
+            aria-label="Închide"
+            onClick={() => setLightbox(null)}
+            className="absolute right-4 top-4 grid h-10 w-10 place-items-center rounded-full bg-white/10 text-xl font-bold text-white hover:bg-white/20"
+          >
+            ×
+          </button>
+          <figure className="max-h-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={lightbox.src}
+              alt={lightbox.caption}
+              className="max-h-[88vh] w-auto max-w-full rounded-xl object-contain"
+            />
+            <figcaption className="mt-3 text-center text-sm text-white/85">
+              {lightbox.caption}
+            </figcaption>
+          </figure>
+        </div>
+      )}
     </section>
   );
 }
@@ -620,7 +665,7 @@ function Reviews() {
   ];
   const loop = [...reviews, ...reviews];
   return (
-    <section id="recenzii" className="overflow-hidden bg-background py-20">
+    <section id="recenzii" className="overflow-hidden bg-background py-12 md:py-14">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow="Recenzii reale"
@@ -666,18 +711,18 @@ function Reviews() {
 
 function About() {
   return (
-    <section id="despre" className="bg-secondary/40 py-20">
+    <section id="despre" className="bg-secondary/40 py-12 md:py-14">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-[1fr_1.2fr] md:px-6">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
             Despre noi
           </p>
           <h2 className="mt-2 font-display text-3xl font-extrabold sm:text-4xl">
-            Mii de plase montate. <br /> Aceeași grijă la fiecare lucrare.
+            Sute de plase montate. <br /> Aceeași grijă la fiecare lucrare.
           </h2>
           <div className="mt-6 grid grid-cols-3 gap-4">
-            <Stat value="2000+" label="Plase montate" />
-            <Stat value="10+" label="Ani experiență" />
+            <Stat value="1000+" label="Plase montate" />
+            <Stat value="5+" label="Ani experiență" />
             <Stat value="100%" label="Seriozitate" />
           </div>
         </div>
