@@ -282,33 +282,33 @@ type Price = {
 function PriceCard({ p }: { p: Price }) {
   return (
     <div
-      className={`relative flex flex-col rounded-2xl p-6 shadow-[var(--shadow-card)] ${
+      className={`relative flex flex-col rounded-2xl p-4 shadow-[var(--shadow-card)] sm:p-5 md:p-6 ${
         p.dark ? "bg-ink text-white" : "bg-card text-foreground"
       }`}
     >
       {p.badge && (
-        <span className="absolute -top-3 left-6 rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">
+        <span className="absolute -top-3 left-4 rounded-full bg-primary px-2.5 py-0.5 text-[10px] font-bold text-primary-foreground sm:left-6 sm:px-3 sm:py-1 sm:text-xs">
           {p.badge}
         </span>
       )}
       <div className="flex items-start justify-between gap-3">
-        <h3 className={`font-display text-xl font-bold ${p.dark ? "text-white" : ""}`}>
+        <h3 className={`font-display text-base font-bold leading-tight sm:text-lg md:text-xl ${p.dark ? "text-white" : ""}`}>
           {p.title}
         </h3>
         {p.icon}
       </div>
-      <div className="mt-4 flex items-baseline gap-1">
-        <span className="font-display text-4xl font-extrabold text-primary">
+      <div className="mt-3 flex items-baseline gap-1">
+        <span className="font-display text-3xl font-extrabold text-primary sm:text-4xl">
           {p.price}
         </span>
-        <span className={`text-sm ${p.dark ? "text-white/70" : "text-muted-foreground"}`}>
+        <span className={`text-xs sm:text-sm ${p.dark ? "text-white/70" : "text-muted-foreground"}`}>
           lei{p.unit ? ` ${p.unit}` : ""}
         </span>
       </div>
-      <ul className="mt-4 space-y-2 text-sm">
+      <ul className="mt-3 space-y-1.5 text-xs sm:text-sm">
         {p.features.map((f) => (
-          <li key={f} className="flex gap-2">
-            <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+          <li key={f} className="flex gap-1.5">
+            <CheckCircle2 className="mt-0.5 h-3.5 w-3.5 shrink-0 text-primary sm:h-4 sm:w-4" />
             <span className={p.dark ? "text-white/85" : "text-foreground/85"}>{f}</span>
           </li>
         ))}
@@ -318,9 +318,9 @@ function PriceCard({ p }: { p: Price }) {
           href={WA_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:opacity-90"
+          className="mt-4 inline-flex items-center justify-center gap-1.5 rounded-full bg-primary px-3 py-2 text-xs font-semibold text-primary-foreground transition hover:opacity-90 sm:px-5 sm:py-2.5 sm:text-sm"
         >
-          Cere ofertă <ArrowRight className="h-4 w-4" />
+          Cere ofertă <ArrowRight className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
         </a>
       )}
     </div>
