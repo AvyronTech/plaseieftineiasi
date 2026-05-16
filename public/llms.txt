@@ -1,0 +1,14 @@
+# Plase Anti-Insecte Iași
+
+> Confecționăm și montăm plase anti-țânțari pentru geam și ușă în Iași și împrejurimi. Montaj rapid, materiale de calitate, prețuri corecte.
+
+Servicii: plase pentru geam (de la 130 lei), plase pentru ușă (de la 220 lei), plase rezistente la pisici, rulouri cu plasă, plase cu magnet. Acoperire: Iași și împrejurimi. Contact: 0751 600 281 (telefon și WhatsApp).
+
+## Pages
+
+- [Acasă](/): Prezentare servicii, prețuri, exemple și contact pentru plase anti-țânțari în Iași.
+
+## Optional
+
+- [Sitemap](/sitemap.xml): Lista URL-urilor indexabile.
+- [Robots](/robots.txt): Reguli pentru crawlere.

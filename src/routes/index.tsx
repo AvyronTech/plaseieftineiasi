@@ -5,7 +5,7 @@ export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "Plase Anti-Insecte Iași — Confecționăm și Montăm | 0751 600 281" },
+      { title: "Plase Anti-Insecte Iași — Confecționăm și Montăm" },
       {
         name: "description",
         content:
