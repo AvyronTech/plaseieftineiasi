@@ -138,7 +138,7 @@ function Hero() {
     >
       <img
         src={heroBg}
-        alt="Plasă anti-insecte montată pe geam cu jardinieră de petunii"
+        alt="Plasă anti-țânțari montată pe geam, cu o pisică pe pervaz"
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/70 to-ink/30" />
