@@ -831,7 +831,7 @@ function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
         </div>
         <div className="grid grid-cols-2 gap-6 md:col-span-2 md:grid-cols-2">
           <div>
-            <h4 className="font-display font-bold">Linkuri utile</h4>
+            <h3 className="font-display font-bold">Linkuri utile</h3>
             <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
               <li><a className="hover:text-primary" href="#preturi">Prețuri</a></li>
               <li><a className="hover:text-primary" href="#servicii">Servicii</a></li>
@@ -841,7 +841,7 @@ function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
             </ul>
           </div>
           <div>
-            <h4 className="font-display font-bold">Contact</h4>
+            <h3 className="font-display font-bold">Contact</h3>
             <ul className="mt-3 space-y-1.5 text-sm">
               <li className="flex items-start gap-2">
                 <Phone className="mt-0.5 h-4 w-4 text-primary" />
