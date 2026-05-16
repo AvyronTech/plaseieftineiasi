@@ -800,11 +800,11 @@ function ContactCTA() {
 
 function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
   return (
-    <footer className="bg-background pt-14 pb-6">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-4 md:px-6">
+    <footer className="bg-background pt-10 pb-6">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 md:grid-cols-4 md:px-6">
         <div className="md:col-span-2">
           <Logo />
-          <p className="mt-4 max-w-md text-sm text-muted-foreground">
+          <p className="mt-3 max-w-md text-sm text-muted-foreground">
             <span className="font-semibold text-foreground">
               Te-ai săturat de țânțari?
             </span>{" "}
@@ -812,7 +812,7 @@ function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
             anti-insecte în Iași și împrejurimi — calitate, montaj rapid și prețuri
             corecte.
           </p>
-          <div className="mt-5 flex gap-2">
+          <div className="mt-4 flex gap-2">
             <a
               href={WA_LINK}
               target="_blank"
@@ -829,51 +829,48 @@ function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
             </a>
           </div>
         </div>
-        <div>
-          <h4 className="font-display font-bold">Linkuri utile</h4>
-          <ul className="mt-3 space-y-2 text-sm text-muted-foreground">
-            <li><a className="hover:text-primary" href="#preturi">Prețuri</a></li>
-            <li><a className="hover:text-primary" href="#servicii">Servicii</a></li>
-            <li><a className="hover:text-primary" href="#exemple">Exemple</a></li>
-            <li><a className="hover:text-primary" href="#recenzii">Recenzii</a></li>
-            <li><a className="hover:text-primary" href="#despre">Despre noi</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-display font-bold">Contact</h4>
-          <ul className="mt-3 space-y-2 text-sm">
-            <li className="flex items-start gap-2">
-              <Phone className="mt-0.5 h-4 w-4 text-primary" />
-              <div>
+        <div className="grid grid-cols-2 gap-6 md:col-span-2 md:grid-cols-2">
+          <div>
+            <h4 className="font-display font-bold">Linkuri utile</h4>
+            <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
+              <li><a className="hover:text-primary" href="#preturi">Prețuri</a></li>
+              <li><a className="hover:text-primary" href="#servicii">Servicii</a></li>
+              <li><a className="hover:text-primary" href="#exemple">Exemple</a></li>
+              <li><a className="hover:text-primary" href="#recenzii">Recenzii</a></li>
+              <li><a className="hover:text-primary" href="#despre">Despre noi</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="font-display font-bold">Contact</h4>
+            <ul className="mt-3 space-y-1.5 text-sm">
+              <li className="flex items-start gap-2">
+                <Phone className="mt-0.5 h-4 w-4 text-primary" />
                 <a href={`tel:${PHONE_INTL}`} className="font-semibold hover:text-primary">
                   {PHONE}
                 </a>
-                <p className="text-xs text-muted-foreground">SMS / Apel / WhatsApp</p>
-              </div>
-            </li>
-            <li className="flex items-start gap-2">
-              <MapPin className="mt-0.5 h-4 w-4 text-primary" />
-              <span className="text-muted-foreground">Iași și împrejurimi</span>
-            </li>
-            <li className="flex items-start gap-2">
-              <Clock className="mt-0.5 h-4 w-4 text-primary" />
-              <span className="text-muted-foreground">Răspundem pe WhatsApp în maxim 10 minute</span>
-            </li>
-          </ul>
-          <h4 className="mt-5 font-display font-bold">Urmărește-ne</h4>
-          <a
-            href={FB_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Facebook"
-            className="mt-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-[#1877F2] text-white transition hover:opacity-90"
-          >
-            <Facebook className="h-4 w-4" />
-          </a>
+              </li>
+              <li className="flex items-start gap-2">
+                <MapPin className="mt-0.5 h-4 w-4 text-primary" />
+                <span className="text-muted-foreground">Iași și împrejurimi</span>
+              </li>
+              <li className="flex items-center gap-2 pt-1">
+                <a
+                  href={FB_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Facebook"
+                  className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#1877F2] text-white transition hover:opacity-90"
+                >
+                  <Facebook className="h-4 w-4" />
+                </a>
+                <span className="text-xs text-muted-foreground">Urmărește-ne</span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div className="mx-auto mt-10 max-w-7xl border-t border-border px-4 pt-5 text-xs text-muted-foreground md:px-6">
+      <div className="mx-auto mt-8 max-w-7xl border-t border-border px-4 pt-4 text-xs text-muted-foreground md:px-6">
         <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
           <p>© {new Date().getFullYear()} Plase Anti-Insecte Iași. Toate drepturile rezervate.</p>
           <div className="flex items-center gap-4">
