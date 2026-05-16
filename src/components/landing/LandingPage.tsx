@@ -134,7 +134,7 @@ function Hero() {
   return (
     <section
       id="top"
-      className="relative isolate overflow-hidden pt-28 pb-20 md:pt-32 md:pb-28"
+      className="relative isolate overflow-hidden pt-24 pb-12 md:pt-28 md:pb-16"
     >
       <img
         src={heroBg}
@@ -163,23 +163,6 @@ function Hero() {
             <Feature icon={<Wrench className="h-4 w-4" />} text="Montaj inclus" />
             <Feature icon={<ShieldCheck className="h-4 w-4" />} text="Materiale de calitate" />
             <Feature icon={<Clock className="h-4 w-4" />} text="Soluții personalizate" />
-          </div>
-
-          <div className="mt-7 flex flex-wrap gap-3">
-            <a
-              href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-whatsapp px-6 py-3.5 text-base font-semibold text-whatsapp-foreground shadow-[var(--shadow-soft)] transition hover:opacity-90"
-            >
-              <MessageCircle className="h-5 w-5" /> WhatsApp: {PHONE}
-            </a>
-            <a
-              href={`tel:${PHONE_INTL}`}
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3.5 text-base font-semibold text-primary-foreground shadow-[var(--shadow-soft)] transition hover:opacity-90"
-            >
-              <Phone className="h-5 w-5" /> Sună acum
-            </a>
           </div>
         </div>
 
@@ -245,7 +228,7 @@ function TrustBar() {
     { icon: <ShieldCheck className="h-5 w-5" />, title: "SERIOZITATE", text: "Siguranță 100% și seriozitate" },
   ];
   return (
-    <section className="border-y border-border bg-background py-8">
+    <section className="border-y border-border bg-background py-6">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-6 px-4 md:grid-cols-3 md:px-6 lg:grid-cols-6">
         {items.map((it) => (
           <div key={it.title} className="text-center">
@@ -401,7 +384,7 @@ function Pricing() {
   ];
 
   return (
-    <section id="preturi" className="bg-secondary/40 py-12 md:py-14">
+    <section id="preturi" className="bg-secondary/40 py-8 md:py-12">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow="Prețuri"
@@ -412,7 +395,7 @@ function Pricing() {
         <h3 className="mt-8 mb-3 font-display text-base font-bold uppercase tracking-wider text-muted-foreground">
           Plase anti-țânțari
         </h3>
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
           {standard.map((p) => (
             <PriceCard key={p.title} p={p} />
           ))}
@@ -421,7 +404,7 @@ function Pricing() {
         <h3 className="mt-8 mb-3 flex items-center gap-2 font-display text-base font-bold uppercase tracking-wider text-muted-foreground">
           <Cat className="h-5 w-5 text-primary" /> Plase rezistente la pisici
         </h3>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-2 gap-3 md:gap-4">
           {cat.map((p) => (
             <PriceCard key={p.title} p={p} />
           ))}
@@ -430,14 +413,14 @@ function Pricing() {
         <h3 className="mt-8 mb-3 font-display text-base font-bold uppercase tracking-wider text-muted-foreground">
           Rulouri cu plasă anti-insecte
         </h3>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-2 gap-3 md:gap-4">
           {rolls.map((p) => (
             <PriceCard key={p.title} p={p} />
           ))}
         </div>
 
         {/* Accessories + included */}
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 grid gap-3 md:grid-cols-3 md:gap-4">
           <div className="rounded-2xl bg-card p-6 shadow-[var(--shadow-card)]">
             <h4 className="font-display text-lg font-bold">Accesorii</h4>
             <ul className="mt-4 space-y-3 text-sm">
@@ -519,7 +502,7 @@ function Services() {
     },
   ];
   return (
-    <section id="servicii" className="bg-background py-12 md:py-14">
+    <section id="servicii" className="bg-background py-8 md:py-12">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow="Servicii"
@@ -571,7 +554,7 @@ function Gallery() {
     };
   }, [lightbox]);
   return (
-    <section id="exemple" className="overflow-hidden bg-secondary/40 py-12 md:py-14">
+    <section id="exemple" className="overflow-hidden bg-secondary/40 py-8 md:py-12">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow="Vezi exemple"
@@ -665,7 +648,7 @@ function Reviews() {
   ];
   const loop = [...reviews, ...reviews];
   return (
-    <section id="recenzii" className="overflow-hidden bg-background py-12 md:py-14">
+    <section id="recenzii" className="overflow-hidden bg-background py-8 md:py-12">
       <div className="mx-auto max-w-7xl px-4 md:px-6">
         <SectionHeading
           eyebrow="Recenzii reale"
@@ -673,7 +656,7 @@ function Reviews() {
           subtitle="Clienții noștri sunt cea mai bună reclamă. Mulțumim pentru fiecare recomandare — ne motivează să facem treabă bună la fiecare montaj."
         />
       </div>
-      <div className="marquee-pause mt-12">
+      <div className="marquee-pause mt-8">
         <div className="flex w-max animate-marquee-slow gap-5 px-4">
           {loop.map((r, i) => (
             <article
@@ -695,7 +678,7 @@ function Reviews() {
         </div>
       </div>
 
-      <div className="mx-auto mt-10 max-w-7xl px-4 md:px-6">
+      <div className="mx-auto mt-6 max-w-7xl px-4 md:px-6">
         <a
           href={FB_LINK}
           target="_blank"
@@ -711,7 +694,7 @@ function Reviews() {
 
 function About() {
   return (
-    <section id="despre" className="bg-secondary/40 py-12 md:py-14">
+    <section id="despre" className="bg-secondary/40 py-8 md:py-12">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-[1fr_1.2fr] md:px-6">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary">
@@ -775,7 +758,7 @@ function Stat({ value, label }: { value: string; label: string }) {
 
 function ContactCTA() {
   return (
-    <section id="contact" className="bg-ink py-16 text-white">
+    <section id="contact" className="bg-ink py-10 text-white md:py-12">
       <div className="mx-auto grid max-w-7xl items-center gap-8 px-4 md:grid-cols-[1.2fr_1fr] md:px-6">
         <div>
           <h2 className="font-display text-3xl font-extrabold sm:text-4xl">
