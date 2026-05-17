@@ -32,7 +32,7 @@ import cat2 from "@/assets/gallery/cat-2.jpg";
 const PHONE = "0751 600 281";
 const PHONE_INTL = "+40751600281";
 const WA_LINK = `https://wa.me/40751600281?text=${encodeURIComponent(
-  "Bună ziua! Sunt interesat(ă) de o plasă anti-insecte. Puteți să-mi spuneți detalii?"
+  "Bună ziua! Sunt interesat de plase anti-insecte."
 )}`;
 const FB_LINK = "https://www.facebook.com/profile.php?id=100063571540381";
 
@@ -362,7 +362,12 @@ function Pricing() {
     {
       title: "Plasă rezistentă pisici — Geam",
       price: "300",
-      features: ["Material imposibil de rupt de pisici", "Siguranță 100% pentru pisici", "Cadru întărit"],
+      features: [
+        "Sistemul de închidere este completat de 2 zăvorâșe, astfel fiind imposibilă deschiderea de către orice animal domestic",
+        "Material imposibil de rupt de pisici",
+        "Siguranță 100% pentru pisici",
+        "Cadru întărit",
+      ],
       dark: true,
       icon: <Cat className="h-6 w-6 text-primary" />,
     },
@@ -370,8 +375,8 @@ function Pricing() {
       title: "Plasă rezistentă pisici — Ușă",
       price: "400",
       features: [
+        "Sistemul de închidere este completat de 2 zăvorâșe, astfel fiind imposibilă deschiderea de către orice animal domestic",
         "Material imposibil de rupt de pisici",
-        "Se blochează cu 2 zăvorașe pentru siguranță maximă",
         "Recomandată pentru balcon",
       ],
       dark: true,
@@ -509,16 +514,6 @@ function Services() {
       title: "Plase rezistente la pisici",
       text: "Material special, imposibil de rupt, cu zăvorașe de siguranță. Liniște pentru tine și pentru pisică.",
     },
-    {
-      icon: <Sparkles className="h-6 w-6" />,
-      title: "Rulouri retractabile",
-      text: "Soluție elegantă pentru geamuri mari — plasa se strânge într-o casetă discretă.",
-    },
-    {
-      icon: <BadgeCheck className="h-6 w-6" />,
-      title: "Recondiționare plase existente",
-      text: "Înlocuim materialul deteriorat și reparăm cadrele, fără să schimbăm tot ansamblul.",
-    },
   ];
   return (
     <section id="servicii" className="bg-background py-8 md:py-12">
@@ -595,9 +590,6 @@ function Gallery() {
                 loading="lazy"
                 className="h-[260px] w-full object-cover sm:h-[320px]"
               />
-              <figcaption className="px-4 py-3 text-sm text-foreground/80">
-                {it.caption}
-              </figcaption>
             </figure>
           ))}
         </div>
