@@ -888,19 +888,19 @@ function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
               </li>
             </ul>
         </div>
-        <div className="order-last md:order-none md:col-span-3 md:flex md:justify-end">
+        <div className="order-last flex justify-center md:order-none md:col-span-3 md:justify-end">
           <a
             href="https://avyron.ro"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Powered by Avyron — avyron.ro"
-            className="inline-flex items-center rounded-md bg-black px-3 py-2 transition hover:opacity-90"
+            className="inline-block overflow-hidden rounded-md bg-black transition hover:opacity-90"
           >
             <img
               src={avyronLogo}
               alt="Powered by Avyron"
               loading="lazy"
-              className="h-10 w-auto sm:h-12"
+              className="block h-auto w-[260px] sm:w-[300px] md:w-[280px] lg:w-[320px]"
             />
           </a>
         </div>
