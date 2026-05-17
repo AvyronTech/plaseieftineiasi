@@ -603,9 +603,14 @@ function Gallery() {
         </div>
       </div>
       <div className="mx-auto mt-6 flex max-w-7xl flex-col items-center gap-3 px-4 text-center md:px-6">
-        <p className="text-sm text-muted-foreground">
-          Mai multe exemple găsiți pe Facebook
-        </p>
+        <a
+          href={FB_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full bg-[#1877F2] px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
+        >
+          <Facebook className="h-4 w-4" /> Mai multe exemple găsiți pe Facebook
+        </a>
       </div>
       {lightbox && (
         <div
