@@ -36,9 +36,13 @@ export const Route = createFileRoute("/")({
           "@type": "LocalBusiness",
           "@id": "https://plaseieftineiasi.ro/#business",
           name: "Plase Anti-Insecte Iași",
-          image: "https://plaseieftineiasi.ro/og.jpg",
+          image: [
+            "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/a24114b0-c9ab-4dc2-aa8f-dad4a7d5f635",
+          ],
           url: "https://plaseieftineiasi.ro/",
           telephone: "+40751600281",
+          currenciesAccepted: "RON",
+          paymentAccepted: "Cash, Card, Transfer bancar",
           areaServed: [
             { "@type": "City", name: "Iași" },
             { "@type": "AdministrativeArea", name: "Județul Iași" },
