@@ -28,7 +28,7 @@ import work4 from "@/assets/gallery/work-4.jpg";
 import work5 from "@/assets/gallery/work-5.jpg";
 import cat1 from "@/assets/gallery/cat-1.jpg";
 import cat2 from "@/assets/gallery/cat-2.jpg";
-import avyronLogo from "@/assets/avyron-powered-by.jpeg";
+import avyronLogo from "@/assets/avyron-powered-by-tight.jpeg";
 
 const PHONE = "0751 600 281";
 const PHONE_INTL = "+40751600281";
