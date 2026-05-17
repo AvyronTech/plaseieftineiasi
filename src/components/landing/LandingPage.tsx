@@ -887,6 +887,22 @@ function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
                 </a>
                 <span className="text-xs text-muted-foreground">Urmărește-ne</span>
               </li>
+              <li className="pt-2">
+                <a
+                  href="https://avyron.ro"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Powered by Avyron — avyron.ro"
+                  className="inline-flex items-center rounded-md bg-black px-2 py-1 transition hover:opacity-90"
+                >
+                  <img
+                    src={avyronLogo}
+                    alt="Powered by Avyron"
+                    loading="lazy"
+                    className="h-7 w-auto"
+                  />
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -900,22 +916,6 @@ function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
               Politica de cookies
             </button>
           </div>
-        </div>
-        <div className="mt-4 flex justify-center sm:justify-end">
-          <a
-            href="https://avyron.ro"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Powered by Avyron — avyron.ro"
-            className="group inline-flex items-center gap-2 rounded-full border border-border bg-black/80 px-3 py-1.5 opacity-70 transition hover:opacity-100"
-          >
-            <img
-              src={avyronLogo}
-              alt="Powered by Avyron"
-              loading="lazy"
-              className="h-5 w-auto sm:h-6"
-            />
-          </a>
         </div>
       </div>
     </footer>
