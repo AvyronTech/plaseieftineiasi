@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://plaseinsecteiasi.lovable.app/sitemap.xml
+Sitemap: https://plaseieftineiasi.ro/sitemap.xml
