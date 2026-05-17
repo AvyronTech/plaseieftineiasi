@@ -294,7 +294,9 @@ function PriceCard({ p }: { p: Price }) {
   return (
     <div
       className={`relative flex flex-col rounded-2xl p-4 shadow-[var(--shadow-card)] sm:p-5 md:p-6 ${
-        p.dark ? "bg-ink text-white" : "bg-card text-foreground"
+        p.dark
+          ? "bg-ink/45 text-white backdrop-blur-md border border-white/15"
+          : "bg-card text-foreground"
       }`}
     >
       {p.badge && (
