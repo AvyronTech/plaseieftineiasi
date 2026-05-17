@@ -28,7 +28,7 @@ import work4 from "@/assets/gallery/work-4.jpg";
 import work5 from "@/assets/gallery/work-5.jpg";
 import cat1 from "@/assets/gallery/cat-1.jpg";
 import cat2 from "@/assets/gallery/cat-2.jpg";
-import avyronLogo from "@/assets/avyron-powered-by.jpeg";
+import avyronLogo from "@/assets/avyron-powered-by-tight.jpeg";
 
 const PHONE = "0751 600 281";
 const PHONE_INTL = "+40751600281";
@@ -888,13 +888,13 @@ function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
               </li>
             </ul>
         </div>
-        <div className="order-last flex justify-center md:order-none md:col-span-3 md:justify-end">
+        <div className="order-last flex items-start justify-center md:order-none md:col-span-3 md:justify-end">
           <a
             href="https://avyron.ro"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Powered by Avyron — avyron.ro"
-            className="inline-block overflow-hidden rounded-md bg-black transition hover:opacity-90"
+            className="inline-flex h-fit overflow-hidden rounded-md leading-none transition hover:opacity-90"
           >
             <img
               src={avyronLogo}
