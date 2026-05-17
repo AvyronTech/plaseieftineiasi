@@ -411,13 +411,22 @@ function Pricing() {
           ))}
         </div>
 
-        <h3 className="mt-8 mb-3 flex items-center gap-2 font-display text-base font-bold uppercase tracking-wider text-muted-foreground">
-          <Cat className="h-5 w-5 text-primary" /> Plase rezistente la pisici
-        </h3>
-        <div className="grid grid-cols-2 gap-3 md:gap-4">
-          {cat.map((p) => (
-            <PriceCard key={p.title} p={p} />
-          ))}
+        <div
+          className="relative mt-8 overflow-hidden rounded-3xl p-4 sm:p-6"
+          style={{
+            backgroundImage: `linear-gradient(135deg, oklch(0.18 0.02 50 / 0.78), oklch(0.18 0.02 50 / 0.55)), url(${catsMeshBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <h3 className="mb-3 flex items-center gap-2 font-display text-base font-bold uppercase tracking-wider text-white/90">
+            <Cat className="h-5 w-5 text-primary" /> Plase rezistente la pisici
+          </h3>
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
+            {cat.map((p) => (
+              <PriceCard key={p.title} p={p} />
+            ))}
+          </div>
         </div>
 
         <h3 className="mt-8 mb-3 font-display text-base font-bold uppercase tracking-wider text-muted-foreground">
