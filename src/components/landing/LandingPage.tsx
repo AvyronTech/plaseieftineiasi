@@ -606,14 +606,6 @@ function Gallery() {
         <p className="text-sm text-muted-foreground">
           Mai multe exemple găsiți pe Facebook
         </p>
-        <a
-          href={FB_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 rounded-full bg-[#1877F2] px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
-        >
-          <Facebook className="h-4 w-4" /> Deschide pagina Facebook
-        </a>
       </div>
       {lightbox && (
         <div
