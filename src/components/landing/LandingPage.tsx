@@ -28,6 +28,7 @@ import work4 from "@/assets/gallery/work-4.jpg";
 import work5 from "@/assets/gallery/work-5.jpg";
 import cat1 from "@/assets/gallery/cat-1.jpg";
 import cat2 from "@/assets/gallery/cat-2.jpg";
+import avyronLogo from "@/assets/avyron-powered-by.jpeg";
 
 const PHONE = "0751 600 281";
 const PHONE_INTL = "+40751600281";
@@ -523,7 +524,7 @@ function Services() {
           title="De la măsurători la montaj — totul inclus"
           subtitle="Lucrăm pentru apartamente și case, indiferent de numărul de plase necesare. Deplasare gratuită în Iași și împrejurimi."
         />
-        <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto mt-8 grid max-w-5xl justify-center gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((s) => (
             <div
               key={s.title}
@@ -899,6 +900,22 @@ function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
               Politica de cookies
             </button>
           </div>
+        </div>
+        <div className="mt-4 flex justify-center sm:justify-end">
+          <a
+            href="https://avyron.ro"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Powered by Avyron — avyron.ro"
+            className="group inline-flex items-center gap-2 rounded-full border border-border bg-black/80 px-3 py-1.5 opacity-70 transition hover:opacity-100"
+          >
+            <img
+              src={avyronLogo}
+              alt="Powered by Avyron"
+              loading="lazy"
+              className="h-5 w-auto sm:h-6"
+            />
+          </a>
         </div>
       </div>
     </footer>
