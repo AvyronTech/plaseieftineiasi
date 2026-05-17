@@ -823,8 +823,8 @@ function ContactCTA() {
 function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
   return (
     <footer className="bg-background pt-10 pb-6">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 md:grid-cols-4 md:px-6">
-        <div className="md:col-span-2">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 md:grid-cols-12 md:px-6">
+        <div className="md:col-span-5">
           <Logo />
           <p className="mt-3 max-w-md text-sm text-muted-foreground">
             <span className="font-semibold text-foreground">
@@ -851,8 +851,7 @@ function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
             </a>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-6 md:col-span-2 md:grid-cols-2">
-          <div>
+        <div className="md:col-span-2">
             <h3 className="font-display font-bold">Linkuri utile</h3>
             <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground">
               <li><a className="hover:text-primary" href="#preturi">Prețuri</a></li>
@@ -861,8 +860,8 @@ function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
               <li><a className="hover:text-primary" href="#recenzii">Recenzii</a></li>
               <li><a className="hover:text-primary" href="#despre">Despre noi</a></li>
             </ul>
-          </div>
-          <div>
+        </div>
+        <div className="md:col-span-2">
             <h3 className="font-display font-bold">Contact</h3>
             <ul className="mt-3 space-y-1.5 text-sm">
               <li className="flex items-start gap-2">
@@ -887,24 +886,23 @@ function Footer({ onOpenCookies }: { onOpenCookies: () => void }) {
                 </a>
                 <span className="text-xs text-muted-foreground">Urmărește-ne</span>
               </li>
-              <li className="pt-2">
-                <a
-                  href="https://avyron.ro"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Powered by Avyron — avyron.ro"
-                  className="inline-flex items-center rounded-md bg-black px-2 py-1 transition hover:opacity-90"
-                >
-                  <img
-                    src={avyronLogo}
-                    alt="Powered by Avyron"
-                    loading="lazy"
-                    className="h-7 w-auto"
-                  />
-                </a>
-              </li>
             </ul>
-          </div>
+        </div>
+        <div className="order-last md:order-none md:col-span-3 md:flex md:justify-end">
+          <a
+            href="https://avyron.ro"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Powered by Avyron — avyron.ro"
+            className="inline-flex items-center rounded-md bg-black px-3 py-2 transition hover:opacity-90"
+          >
+            <img
+              src={avyronLogo}
+              alt="Powered by Avyron"
+              loading="lazy"
+              className="h-10 w-auto sm:h-12"
+            />
+          </a>
         </div>
       </div>
 
