@@ -20,6 +20,7 @@ import {
 } from "lucide-react";
 
 import heroBg from "@/assets/hero-bg.jpg";
+import catsMeshBg from "@/assets/cats-mesh-bg.jpg";
 import work1 from "@/assets/gallery/work-1.jpg";
 import work2 from "@/assets/gallery/work-2.jpg";
 import work3 from "@/assets/gallery/work-3.jpg";
@@ -123,6 +124,15 @@ function Header() {
             className="inline-flex items-center gap-2 rounded-full bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-card)] transition hover:opacity-90"
           >
             <Phone className="h-4 w-4" /> {PHONE}
+          </a>
+          <a
+            href={FB_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Pagina Facebook"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white shadow-[var(--shadow-card)] transition hover:opacity-90"
+          >
+            <Facebook className="h-4 w-4" />
           </a>
         </div>
       </div>
@@ -401,13 +411,22 @@ function Pricing() {
           ))}
         </div>
 
-        <h3 className="mt-8 mb-3 flex items-center gap-2 font-display text-base font-bold uppercase tracking-wider text-muted-foreground">
-          <Cat className="h-5 w-5 text-primary" /> Plase rezistente la pisici
-        </h3>
-        <div className="grid grid-cols-2 gap-3 md:gap-4">
-          {cat.map((p) => (
-            <PriceCard key={p.title} p={p} />
-          ))}
+        <div
+          className="relative mt-8 overflow-hidden rounded-3xl p-4 sm:p-6"
+          style={{
+            backgroundImage: `linear-gradient(135deg, oklch(0.18 0.02 50 / 0.78), oklch(0.18 0.02 50 / 0.55)), url(${catsMeshBg})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        >
+          <h3 className="mb-3 flex items-center gap-2 font-display text-base font-bold uppercase tracking-wider text-white/90">
+            <Cat className="h-5 w-5 text-primary" /> Plase rezistente la pisici
+          </h3>
+          <div className="grid grid-cols-2 gap-3 md:gap-4">
+            {cat.map((p) => (
+              <PriceCard key={p.title} p={p} />
+            ))}
+          </div>
         </div>
 
         <h3 className="mt-8 mb-3 font-display text-base font-bold uppercase tracking-wider text-muted-foreground">
@@ -582,6 +601,19 @@ function Gallery() {
             </figure>
           ))}
         </div>
+      </div>
+      <div className="mx-auto mt-6 flex max-w-7xl flex-col items-center gap-3 px-4 text-center md:px-6">
+        <p className="text-sm text-muted-foreground">
+          Mai multe exemple găsiți pe Facebook
+        </p>
+        <a
+          href={FB_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-full bg-[#1877F2] px-5 py-2.5 text-sm font-semibold text-white transition hover:opacity-90"
+        >
+          <Facebook className="h-4 w-4" /> Deschide pagina Facebook
+        </a>
       </div>
       {lightbox && (
         <div
@@ -965,13 +997,7 @@ export function LandingPage() {
   const [cookieOpen, setCookieOpen] = useState(false);
   const [cookieDetails, setCookieDetails] = useState(false);
 
-  useEffect(() => {
-    const accepted = typeof window !== "undefined" && localStorage.getItem("cookies-ok");
-    if (!accepted) {
-      const t = setTimeout(() => setCookieOpen(true), 700);
-      return () => clearTimeout(t);
-    }
-  }, []);
+  // Cookie banner nu mai apare automat — se deschide doar din footer.
 
   const acceptCookies = () => {
     try {
