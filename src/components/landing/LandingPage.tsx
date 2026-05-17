@@ -997,13 +997,7 @@ export function LandingPage() {
   const [cookieOpen, setCookieOpen] = useState(false);
   const [cookieDetails, setCookieDetails] = useState(false);
 
-  useEffect(() => {
-    const accepted = typeof window !== "undefined" && localStorage.getItem("cookies-ok");
-    if (!accepted) {
-      const t = setTimeout(() => setCookieOpen(true), 700);
-      return () => clearTimeout(t);
-    }
-  }, []);
+  // Cookie banner nu mai apare automat — se deschide doar din footer.
 
   const acceptCookies = () => {
     try {
