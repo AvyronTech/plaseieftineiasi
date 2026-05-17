@@ -96,8 +96,10 @@ export const Route = createFileRoute("/")({
           },
           aggregateRating: {
             "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "37",
+            ratingValue: "5.0",
+            reviewCount: "47",
+            bestRating: "5",
+            worstRating: "1",
           },
         }),
       },
