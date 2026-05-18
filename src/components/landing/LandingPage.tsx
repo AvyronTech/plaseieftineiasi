@@ -41,7 +41,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   return (
     <a
       href={href}
-      className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+      className="text-sm font-medium text-foreground transition-colors hover:text-primary"
     >
       {children}
     </a>
@@ -74,7 +74,7 @@ function Logo({ light = false }: { light?: boolean }) {
         </span>
         <span
           className={`block text-[11px] font-medium ${
-            light ? "text-white/70" : "text-muted-foreground"
+            light ? "text-white/90" : "text-muted-foreground"
           }`}
         >
           Plase anti-insecte
@@ -152,7 +152,7 @@ function Hero() {
         alt="Plasă anti-țânțari montată pe geam, cu o pisică pe pervaz"
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/70 to-ink/30" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/80 to-ink/60" />
       <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-[1.1fr_0.9fr] md:px-6">
         <div className="text-white">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
@@ -314,7 +314,7 @@ function PriceCard({ p }: { p: Price }) {
         <span className="font-display text-3xl font-extrabold text-primary sm:text-4xl">
           {p.price}
         </span>
-        <span className={`text-xs sm:text-sm ${p.dark ? "text-white/70" : "text-muted-foreground"}`}>
+        <span className={`text-xs sm:text-sm ${p.dark ? "text-white/90" : "text-muted-foreground"}`}>
           lei{p.unit ? ` ${p.unit}` : ""}
         </span>
       </div>
