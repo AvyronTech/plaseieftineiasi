@@ -344,12 +344,12 @@ function Pricing() {
   const standard: Price[] = [
     {
       title: "Plasă pentru geam",
-      price: "130",
+      price: "140",
       features: ["Material anti-insecte", "Cadru aluminiu", "Montaj inclus"],
     },
     {
       title: "Plasă pentru ușă",
-      price: "220",
+      price: "230",
       features: ["Cadru robust", "Balamale rezistente", "Montaj inclus"],
     },
     {

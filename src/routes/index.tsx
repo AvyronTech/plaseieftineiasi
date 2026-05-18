@@ -9,12 +9,12 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Plase anti-insecte în Iași: țânțari, geam, ușă, rulou și plase rezistente la pisici. Montaj rapid în Iași și împrejurimi, de la 130 lei. Sună 0751 600 281.",
+          "Plase anti-insecte în Iași: țânțari, geam, ușă, rulou și plase rezistente la pisici. Montaj rapid în Iași și împrejurimi, de la 140 lei. Sună 0751 600 281.",
       },
       { name: "keywords", content: "plase tantari Iasi, plase anti insecte Iasi, plase tantari ieftine Iasi, montaj plase tantari Iasi, plasa tantari geam Iasi, plasa tantari usa Iasi, plase rulou Iasi, plase rezistente pisici Iasi, plase magnetice Iasi, confectionare plase Iasi" },
       { name: "author", content: "Plase Anti-Insecte Iași" },
       { property: "og:title", content: "Plase Anti-Insecte Iași — Montaj rapid, prețuri corecte" },
-      { property: "og:description", content: "Confecționăm și montăm plase anti-țânțari în Iași și împrejurimi. De la 130 lei. Răspundem pe WhatsApp în maxim 10 minute." },
+      { property: "og:description", content: "Confecționăm și montăm plase anti-țânțari în Iași și împrejurimi. De la 140 lei. Răspundem pe WhatsApp în maxim 10 minute." },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "ro_RO" },
       { property: "og:url", content: "https://plaseieftineiasi.ro/" },
@@ -66,7 +66,7 @@ export const Route = createFileRoute("/")({
               closes: "20:00",
             },
           ],
-          priceRange: "130–580 RON",
+          priceRange: "140–580 RON",
           sameAs: ["https://www.facebook.com/profile.php?id=100063571540381"],
           hasOfferCatalog: {
             "@type": "OfferCatalog",
@@ -76,7 +76,7 @@ export const Route = createFileRoute("/")({
                 "@type": "Offer",
                 itemOffered: { "@type": "Service", name: "Plasă anti-țânțari pentru geam" },
                 priceCurrency: "RON",
-                price: "130",
+                price: "140",
               },
               {
                 "@type": "Offer",
