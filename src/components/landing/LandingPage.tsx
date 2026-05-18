@@ -152,7 +152,7 @@ function Hero() {
         alt="Plasă anti-țânțari montată pe geam, cu o pisică pe pervaz"
         className="absolute inset-0 -z-10 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/85 via-ink/70 to-ink/30" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/90 via-ink/80 to-ink/60" />
       <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-[1.1fr_0.9fr] md:px-6">
         <div className="text-white">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
