@@ -41,7 +41,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
   return (
     <a
       href={href}
-      className="text-sm font-medium text-foreground/80 transition-colors hover:text-primary"
+      className="text-sm font-medium text-foreground transition-colors hover:text-primary"
     >
       {children}
     </a>
@@ -74,7 +74,7 @@ function Logo({ light = false }: { light?: boolean }) {
         </span>
         <span
           className={`block text-[11px] font-medium ${
-            light ? "text-white/70" : "text-muted-foreground"
+            light ? "text-white/90" : "text-muted-foreground"
           }`}
         >
           Plase anti-insecte
@@ -314,7 +314,7 @@ function PriceCard({ p }: { p: Price }) {
         <span className="font-display text-3xl font-extrabold text-primary sm:text-4xl">
           {p.price}
         </span>
-        <span className={`text-xs sm:text-sm ${p.dark ? "text-white/70" : "text-muted-foreground"}`}>
+        <span className={`text-xs sm:text-sm ${p.dark ? "text-white/90" : "text-muted-foreground"}`}>
           lei{p.unit ? ` ${p.unit}` : ""}
         </span>
       </div>
