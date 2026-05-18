@@ -83,6 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:description", content: "Confectionam si montam plase anti-insecte in Iasi si zonele adiacente cu rapiditate și profesionalism folosind produse de calitate și durabile." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/a24114b0-c9ab-4dc2-aa8f-dad4a7d5f635" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/a24114b0-c9ab-4dc2-aa8f-dad4a7d5f635" },
+      { name: "google-site-verification", content: "uB11t1lIt-wVuHDOucpezj7Kr3HhwhHU6ugDEUznSKE" },
     ],
     links: [
       {
