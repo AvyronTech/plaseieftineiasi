@@ -11,7 +11,6 @@ export const Route = createFileRoute("/")({
         content:
           "Plase anti-insecte în Iași: țânțari, geam, ușă, rulou și plase rezistente la pisici. Montaj rapid în Iași și împrejurimi, de la 140 lei. Sună 0751 600 281.",
       },
-      { name: "keywords", content: "plase tantari Iasi, plase anti insecte Iasi, plase tantari ieftine Iasi, montaj plase tantari Iasi, plasa tantari geam Iasi, plasa tantari usa Iasi, plase rulou Iasi, plase rezistente pisici Iasi, plase magnetice Iasi, confectionare plase Iasi" },
       { name: "keywords", content: "plase tantari Iasi, plase anti insecte Iasi, plase tantari ieftine Iasi, plase ieftine Iasi, montaj plase tantari Iasi, plasa tantari geam Iasi, plasa tantari usa Iasi, plase rulou Iasi, plase rezistente pisici Iasi, plase pentru pisici Iasi, plase magnetice Iasi, plase cu magnet Iasi, confectionare plase Iasi, plase anti insecte Bucium, plase tantari Pacurari, plase tantari Tatarasi, plase tantari Copou, plase tantari Nicolina, plase tantari Alexandru cel Bun" },
       { name: "author", content: "Plase Anti-Insecte Iași" },
       { property: "og:title", content: "Plase Anti-Insecte Iași — Montaj rapid, prețuri corecte" },
